@@ -8,26 +8,30 @@ import {
 } from 'react-router-dom';
 import HighScore from './Components/HighScore/HighScore.jsx';
 import LogIn from './Components/LogIn/LogIn.jsx';
+import ErrorPage from './error-page.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
+    errorElement: <ErrorPage />,
   },
 {
   path: '/HighScore',
-  element:<HighScore/>
+  element:<HighScore/>,
+  errorElement: <HighScore />,
 },
 {
   path: '/LogIn',
-  element:<LogIn/>
+  element:<LogIn/>,
+  errorElement:<LogIn />,
 }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </StrictMode>
 );
 
 
