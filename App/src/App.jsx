@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
+import Navigation from './Components/Navigation/Navigation.jsx';
 
 function App() {
   const [count, setCount] = useState(0) 
@@ -23,6 +24,7 @@ function App() {
   
   return (
     <>
+      <Navigation />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
